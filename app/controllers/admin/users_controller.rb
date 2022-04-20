@@ -6,14 +6,18 @@ module Admin
 
     def show
       @user = User.find(user_params[:id])
+      redirect_to admin_user_path(@user.id)
     end
 
     def destroy
       @user = User.find(params[:id])
   
+  binding.pry
+  
       if @user.destroy
+        
         flash[:success] = 'Success'
-        redirect_to users_path
+        redirect_to admin_users_path
       else
         flash[:error] = 'Error'
       end
@@ -22,7 +26,7 @@ module Admin
     private 
 
     def user_params
-      params.require(:user).permit(:name)
+      params.require(:user).permit(:email)
     end
   end
 end
