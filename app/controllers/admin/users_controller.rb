@@ -9,6 +9,14 @@ module Admin
     end
 
     def destroy
+      @user = User.find(params[:id])
+  
+      if @user.destroy
+        flash[:success] = 'Success'
+        redirect_to users_path
+      else
+        flash[:error] = 'Error'
+      end
     end
 
     private 
