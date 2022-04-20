@@ -1,0 +1,15 @@
+  <main>
+    <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h3><%= @user.email %></h3>
+          <p class="lead text-muted"><h3>Welcome</h3></p>
+          <p>
+            <%= link_to 'Edit profile', edit_user_registration_path(current_user), class: 'btn btn-primary' %>
+            <%= link_to 'All users', admin_users_path, class: 'btn btn-primary' %>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
