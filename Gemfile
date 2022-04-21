@@ -45,6 +45,8 @@ gem 'jquery-rails'
 
 gem 'image_processing', '~> 1.2'
 
+gem 'haml-rails', '~> 2.0'
+
 gem "erb2haml", :group => :development
 
 group :development, :test do
