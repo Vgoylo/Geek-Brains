@@ -40,7 +40,7 @@ gem 'bootstrap', '~> 5.1', '>= 5.1.3'
 
 gem 'jquery-rails'
 
-gem 'erb2haml', '~> 0.1.5'
+gem "erb2haml", :group => :development
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
