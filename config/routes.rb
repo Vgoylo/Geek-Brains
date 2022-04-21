@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-  resource :profile, only: %i[edit update show]
+  resources :profiles, only: [:edit, :update, :show]
   
   root to: 'home#index'
 end
