@@ -1,0 +1,30 @@
+%body
+  .container
+    %header.d-flex.flex-wrap.justify-content-center.py-3.mb-4{:class => "border-bottom,", :navbar => "", "navbar-light" => "", :style => "background-color: #1f5d;"}
+      %a.d-flex.align-items-center.mb-3.mb-md-0.me-md-auto.text-dark.text-decoration-none{:href => root_path}
+        %svg.bi.me-2{:height => "32", :width => "40"}
+          %use{"xlink:href" => "root_path"}
+        %div
+          .col-12.btn.btn-primary GeekBrainsCourse
+      .col-2.d-flex.text-primary
+        = Time.now.strftime("%d.%m.%Y %H:%M")
+      - unless current_user
+        .col-2.text-primary
+      - if user_signed_in?
+        %ul.nav.nav-pills
+          %li.nav-item
+            = link_to 'Home', root_path, class: "nav-link"
+          %li.nav-item
+            = link_to 'All Users', admin_users_path, class: "nav-link"
+          %li.nav-item
+            = link_to 'Edit', edit_user_registration_path, class: "nav-link"
+          %li.nav-item
+            = link_to 'Logout', destroy_user_session_path, class: "nav-link", method: :delete
+      - else
+        %ul.nav.nav-pills
+          %li.nav-item
+            = link_to t('login'), new_user_session_path, class: "nav-link"
+          %li.nav-item
+            = link_to t('register_now'), new_user_registration_path, class: "nav-link"
+  %p.notice= notice
+  %p.alert= alert
