@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+
+  resources :profile, only: %i[edit update show]
+  
   namespace :admin do
     resources :users, only: %i[index show destroy]
   end
