@@ -40,6 +40,11 @@ gem 'bootstrap', '~> 5.1', '>= 5.1.3'
 
 gem 'jquery-rails'
 
+# To process and upload images to Trix
+# Use Active Storage variant
+
+gem 'image_processing', '~> 1.2'
+
 gem "erb2haml", :group => :development
 
 group :development, :test do
