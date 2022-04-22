@@ -37,7 +37,17 @@ gem 'pry'
 gem 'devise'
 
 gem 'bootstrap', '~> 5.1', '>= 5.1.3'
+
 gem 'jquery-rails'
+
+# To process and upload images to Trix
+# Use Active Storage variant
+
+gem 'image_processing', '~> 1.2'
+
+gem 'haml-rails', '~> 2.0'
+
+gem "erb2haml", :group => :development
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

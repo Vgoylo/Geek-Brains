@@ -1,0 +1,13 @@
+/= @user.info
+%main
+  %section.py-5.text-center.container
+    .row.py-lg-5
+      .col-lg-6.col-md-8.mx-auto
+        %h3 Welcome 
+        %h2= @user.email
+        %p.lead.text-muted
+        %h2= @user.info
+        %p
+          = link_to 'Edit profile', edit_profile_path(current_user), class: 'btn btn-primary'
+          = link_to 'All users', admin_users_path, class: 'btn btn-primary'
+          = link_to 'Back', root_path, class: 'btn btn-primary'

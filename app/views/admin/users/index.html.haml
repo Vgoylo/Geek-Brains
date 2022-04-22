@@ -1,0 +1,15 @@
+- if admin_users_path
+  .container.col-md-4
+    = link_to 'Back', root_path, class: 'btn btn-primary'
+  %table.table.table-hover
+    %thead
+      %tr
+        %th{:scope => "col"} №
+        %th{:scope => "col"}
+          = 'email'
+    %tbody.table.table-striped
+      - @users.each_with_index do |user, index|
+        %tr
+          %th{:scope => "row"}= index + 1
+          %td= link_to  user.email, admin_user_path(user)
+          %td= link_to 'Destroy', admin_user_path(user), method: :delete
