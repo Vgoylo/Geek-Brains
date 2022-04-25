@@ -6,13 +6,42 @@
     <title>HTML ❤ JS</title>
   </head>
   <body>
-    <button id="button">Click me!</button>
+    <button id="click-me" class ="button button--green">Click me!</button>
   </body>
+  <style>
+    .button {
+      color: white;
+    }
+    .button--green {
+      background-color: green;
+    }
+    .button--blue {
+      background-color: blue;
+    }
+    .button--red {
+      background-color: red;
+    }
+  </style>
   <script>
-    const hello = "Hello from JS";
-    setTimeout(function() {
-      div = document.getElementById("hello")
-      div.innerHTML = hello
-    }, 3000)
+    const getButtonColorClass = () => {
+      const colors = ["gree", "blue", "red"];
+      const index = Math.floor(Math.random() * colors.length);
+
+      return `button--${colors[index]}`;
+    }
+
+    const changeButtonClass = (buttonElemet) => {
+      const colorClass = getButtonColorClass();
+      const className = `button ${colorClass}`;
+      buttonElement.className = className; 
+    }
+
+    const handleClick = (even) => {
+      const buttonElement = even.target;
+      changeButtonClass(buttonElement);
+    }
+
+    const buttonElement = document.getElementById("click-me");
+    buttonElement.addEventListener("click", handleClick);
   </script>
 </html>
