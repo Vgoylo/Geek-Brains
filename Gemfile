@@ -40,6 +40,8 @@ gem 'bootstrap', '~> 5.1', '>= 5.1.3'
 
 gem 'jquery-rails'
 
+gem 'sidekiq'
+
 # To process and upload images to Trix
 # Use Active Storage variant
 
