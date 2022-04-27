@@ -2,6 +2,7 @@
 
 class ProfilesController < ApplicationController
   def edit
+    HardJob.perform_async
     @user = current_user
   end
 
