@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 class TwoJob
   include Sidekiq::Job
 
-  def perform(*args)
+  def perform(*_args)
     sleep(1.minutes)
-    puts 'Bye Piter! Yuo delete self profile'
+    puts 'Bye Peter! You delete self profile'
   end
 end
