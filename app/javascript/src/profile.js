@@ -18,7 +18,7 @@ const handleClick = (even) => {
 
 window.addEventListener('turbolinks:load', function () {
   const buttonElement = document.getElementById("click-me");
-  if(buttonElement) {
+  if (buttonElement) {
     buttonElement.addEventListener("click", handleClick);
   }
 })
