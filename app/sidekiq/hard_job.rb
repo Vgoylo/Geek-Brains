@@ -6,6 +6,6 @@ class HardJob
   def perform(*_args)
     # Do something
     sleep(1.minutes)
-    puts 'Hello Piter this your profile. You can edit self profile'
+    puts 'Hello Peter this your profile. You can edit self profile'
   end
 end
