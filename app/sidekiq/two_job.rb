@@ -5,6 +5,6 @@ class TwoJob
 
   def perform(*_args)
     sleep(1.minutes)
-    puts 'Bye Peter! You delete self profile'
+    puts 'Bye Peter! You deleted your self profile '
   end
 end
