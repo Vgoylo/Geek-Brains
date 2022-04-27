@@ -3,8 +3,8 @@
 class TwoJob
   include Sidekiq::Job
 
-  def perform(*_args)
+  def perform(user)
     sleep(1.minutes)
-    puts 'Bye Peter! You deleted your self profile '
+    puts "Bye #{user}! You deleted your self profile"
   end
 end
