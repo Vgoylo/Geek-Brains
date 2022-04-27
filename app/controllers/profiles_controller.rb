@@ -2,8 +2,8 @@
 
 class ProfilesController < ApplicationController
   def edit
-    HardJob.perform_async
     @user = current_user
+    HardJob.perform_async(@user.email)
   end
 
   def show
