@@ -11,6 +11,8 @@ module Admin
     end
 
     def destroy
+      TwoJob.perform_at(1.minutes)
+
       @user = User.find(params[:id])
 
       if @user.destroy

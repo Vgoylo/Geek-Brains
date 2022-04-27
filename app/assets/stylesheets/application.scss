@@ -13,3 +13,20 @@
  */
 
 @import "bootstrap";
+
+.button{
+  color: white;
+  margin-top: 5px;
+
+  &--green {
+    background-color: green;
+  }
+
+  &--blue {
+    background-color: blue;
+  }
+
+  &--red {
+    background-color: red;
+  }
+}
