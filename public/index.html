@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="https://kit.fontawesome.com/1dc581eadb.js" crossorigin="anonymous"></script>
+    <title>HTML ❤ JS</title>
+  </head>
+  <body>
+    <!-- JS style -->
+    <i class="fab fa-js"></i>
+  
+    <!-- regular style -->
+    <i class="far fa-user"></i>
+  
+    <!--brand icon-->
+    <i class="fab fa-github-square"></i>
+
+    <div id="hello">Hello from HTML</div>
+  </body>
+  <script>
+    const hello = "Hello from JS";
+    setTimeout(function() {
+      div = document.getElementById("hello")
+      div.innerHTML = hello
+    }, 3000)
+  </script>
+</html>

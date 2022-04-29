@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>HTML ❤ JS</title>
+  </head>
+  <body>
+    <button id="click-me" class ="button button--green">Click me!</button>
+  </body>
+  <style>
+    .button {
+      color: white;
+    }
+    .button--green {
+      background-color: green;
+    }
+    .button--blue {
+      background-color: blue;
+    }
+    .button--red {
+      background-color: red;
+    }
+  </style>
+  <script>
+    const getButtonColorClass = () => {
+      const colors = ["gree", "blue", "red"];
+      const index = Math.floor(Math.random() * colors.length);
+
+      return `button--${colors[index]}`;
+    }
+
+    const changeButtonClass = (buttonElemet) => {
+      const colorClass = getButtonColorClass();
+      const className = `button ${colorClass}`;
+      buttonElement.className = className; 
+    }
+
+    const handleClick = (even) => {
+      const buttonElement = even.target;
+      changeButtonClass(buttonElement);
+    }
+
+    const buttonElement = document.getElementById("click-me");
+    buttonElement.addEventListener("click", handleClick);
+  </script>
+</html>
