@@ -2,6 +2,7 @@
 
 class TwoJob
   include Sidekiq::Job
+  sidekiq_options queue:'low'
 
   def perform(user)
     sleep(1.minutes)

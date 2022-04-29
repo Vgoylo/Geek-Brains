@@ -8,6 +8,7 @@ module Admin
 
     def show
       @user = User.find(params[:id])
+      WelcomeMailer.welcome_email(@user).deliver_later
     end
 
     def destroy

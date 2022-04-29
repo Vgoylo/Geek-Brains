@@ -2,6 +2,7 @@
 
 class HardJob
   include Sidekiq::Job
+  sidekiq_options queue: 'critical'
 
   def perform(user)
     # Do something
